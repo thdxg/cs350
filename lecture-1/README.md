@@ -1,6 +1,6 @@
 # Lecture 1
 
-| In Linux, everything is a file.
+In Linux, everything is a file.
 
 - File system
     - Inode
