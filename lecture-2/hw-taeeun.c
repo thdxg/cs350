@@ -18,19 +18,19 @@ int main() {
   }
 
   int source_fd = open(path, O_RDONLY);
+  // it removes the content and restarts file if specified O_CREAT
   int target_fd = open(target_path, O_RDWR | O_CREAT, 0644);
 
   char buf[buffer_size];
   int bytes_read = 1;
   while ((bytes_read = read(source_fd, &buf, buffer_size)) > 0) {
-    if (bytes_read < 0) {
-      perror("read");
-    }
-
     int bytes_written = write(target_fd, buf, buffer_size);
     if (bytes_written < 0) {
       perror("write");
     }
+  }
+  if (bytes_read < 0) {
+    perror("read");
   }
 
   printf("successfully copied to %s\n", target_path);
