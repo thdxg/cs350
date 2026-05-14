@@ -23,14 +23,13 @@ int main() {
   char buf[buffer_size];
   int bytes_read = 1;
   while ((bytes_read = read(source_fd, &buf, buffer_size)) > 0) {
-    if (bytes_read < 0) {
-      perror("read");
-    }
-
     int bytes_written = write(target_fd, buf, buffer_size);
     if (bytes_written < 0) {
       perror("write");
     }
+  }
+  if (bytes_read < 0) {
+    perror("read");
   }
 
   printf("successfully copied to %s\n", target_path);
