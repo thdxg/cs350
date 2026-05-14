@@ -12,11 +12,12 @@
 int main() {
     int fd = open(filename, O_RDONLY);
     int result_fd = open(destination, O_WRONLY); 
+    
+    char *buf1; // 0 capacity. so can't read anything into this buffer. same as char buf1[0]
+    char buf2[1000]; // 1000 capacity. buf2 is a pointer to the first element in the array.
+    // read(fd, &buf, 1000);
 
-    char buf[*];
-    read(fd, &buf, 1000);
-
-    write(fd, &buf, 1000);
+    // write(fd, &buf, 1000);
 
     close(fd);
 

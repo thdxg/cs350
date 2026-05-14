@@ -2,8 +2,12 @@
 
 Make it enjoyable
 
+## Progress
 
-file type   user's permission.   group's permission  other's permission
--           rw-                  rw-                 rw-
-
-
+- File system
+  - Inode
+  - File types, permissions
+- File I/O
+  - File descriptor
+  - Unbuffered
+  - Buffered

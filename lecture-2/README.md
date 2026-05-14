@@ -1,10 +1,10 @@
 # Lecture 2
 
 - File descriptor
-    - stdin, stdout, stderr
+  - stdin, stdout, stderr
 - File I/O
-    - Unbuffered (read/write raw)
-    - Buffered
+  - Unbuffered (read/write raw)
+  - Buffered
 
 
 ## Homework
